@@ -22,7 +22,12 @@ public class App
         InputStreamReader in = new InputStreamReader(s.getInputStream());
         BufferedReader br = new BufferedReader(in);
         String str = br.readLine();
-        System.out.println("Client: "+str);
+        
+        PrintWriter pr1 = new PrintWriter(s.getOutputStream());
+        pr1.println(str.toUpperCase());
+        pr1.flush();
+
+        System.out.println("Client: "+str.toUpperCase());
 
         PrintWriter pr = new PrintWriter(s.getOutputStream());
         pr.println("ben arrivato");

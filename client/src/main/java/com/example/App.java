@@ -28,6 +28,11 @@ public class App
         /*InputStreamReader in = new InputStreamReader(s.getInputStream());
         BufferedReader br = new BufferedReader(in);*/
 
+        BufferedReader inputStrem1 = new BufferedReader(new InputStreamReader(s.getInputStream())); 
+
+        String str1 = inputStrem1.readLine();
+        System.out.println("Server: "+str1);
+
         BufferedReader inputStrem = new BufferedReader(new InputStreamReader(s.getInputStream())); 
 
         String str = inputStrem.readLine();
